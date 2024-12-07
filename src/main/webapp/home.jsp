@@ -7,33 +7,21 @@
         /* Global Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #ffcccc;
             margin: 0;
             padding: 0;
         }
 
         /* Banner Section */
         .banner {
-            background-image: url('your-banner-image.jpg'); /* Add your banner image here */
+            background-image: url('images/DON9.png'); /* Updated to reference your image */
             height: 100vh;
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .banner h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .banner p {
-            font-size: 1.5rem;
-            margin-top: 20px;
+            justify-content: flex-start; /* Align items to the left */
+            position: relative;
         }
 
         .banner .btn {
@@ -41,9 +29,12 @@
             color: white;
             padding: 12px 24px;
             border-radius: 5px;
-            margin-top: 20px;
             text-decoration: none;
             font-size: 1.2rem;
+            position: absolute;
+            left: 130px; /* Adjust this value to move closer or farther from the left edge */
+            transform: translateY(-50%);
+            top: 70%; /* Align vertically to the middle */
         }
 
         .banner .btn:hover {
@@ -119,13 +110,8 @@
 </head>
 <body>
 
-    <!-- Banner Section for Bold Introduction -->
     <div class="banner">
-        <div>
-            <h1>Let's Spread Happiness</h1>
-            <p>We Deliver your Donations to the Right Place</p>
-            <a href="donate.jsp" class="btn">Book a Pickup</a>
-        </div>
+        <a href="index.jsp" class="btn">DONATE NOW</a>
     </div>
 
     <!-- Icon Section for Features -->
@@ -171,7 +157,7 @@
     </footer>
 
     <!-- Include the footer -->
-    <%@include file="includes/footer.jsp"%> <!-- Ensure this file exists -->
+    <%@include file="includes/footer.jsp"%>
 
 </body>
 </html>

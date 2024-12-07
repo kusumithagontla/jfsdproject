@@ -1,261 +1,133 @@
-import React from "react";
-import Footer from "./Footer";
-import { MDBRow, MDBCol } from "mdb-react-ui-kit";
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Online Donation Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('images/DON10.png') no-repeat center center/cover;
+        }
 
-const Contact = () => {
-  return (
-    <>
-      {/* Header Section */}
-      <section
-        style={{
-          fontFamily: "'Poppins', sans-serif",
-          background: "linear-gradient(to right, #6e7dff, #8794ff)",
-          color: "#fff",
-          padding: "60px 0",
-          textAlign: "center",
-        }}
-      >
-        <div className="container">
-          <h2
-            style={{
-              fontWeight: "700",
-              fontSize: "45px",
-              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
-            }}
-          >
-            Contact Us
-          </h2>
-          <p
-            style={{
-              fontSize: "20px",
-              marginTop: "10px",
-              fontWeight: "300",
-            }}
-          >
-            Make your first step towards something good
-          </p>
+        .header-section {
+           background: url('images/DON7.png') no-repeat center center/cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header-section h2 {
+            font-size: 45px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .header-section p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .contact-details, .contact-form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .map-iframe {
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            height: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            background-color: #FFA500; /* Orange color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline */
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            background-color: #cc8400; /* Darker shade of orange for hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you. Reach out with any questions or feedback.</p>
         </div>
-      </section>
+    </section>
 
-      {/* Main Content with grey background */}
-      <section
-        style={{
-          fontFamily: "'Poppins', sans-serif",
-          backgroundColor: "#f0f0f0",
-          padding: "40px 0",
-        }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2
-                style={{
-                  fontSize: "30px",
-                  color: "#4e73df",
-                  fontWeight: "600",
-                  marginBottom: "20px",
-                }}
-              >
-                How to find us
-              </h2>
-              <h5 style={{ color: "#7d7d7d" }}>Address and Direction</h5>
-            </div>
-          </div>
-
-          <div className="row mt-4">
-            {/* Left Section with Image */}
-            <div className="col-lg-6 d-flex justify-content-center">
-              <img
-                src={require("../../images/contact.jpg")}
-                alt="Contact"
-                style={{
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                  transition: "transform 0.3s ease",
-                }}
-                width="650"
-                height="550"
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "scale(1.05)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "scale(1)")
-                }
-              />
+    <!-- Main Content Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Contact Details -->
+            <div class="col-md-6 mb-4">
+                <div class="contact-details">
+                    <h3 class="mb-4">Our Contact Information</h3>
+                    <p><strong>Address:</strong> Indian Enclave, Ayyappa Nagar, Vijayawada, Andhra Pradesh, India</p>
+                    <p><strong>Phone:</strong> +91 7799223399</p>
+                    <p><strong>Email:</strong> support@donationplatform.com</p>
+                    <p><strong>Open Hours:</strong> Mon - Sat, 8:00 AM - 4:30 PM</p>
+                </div>
             </div>
 
-            {/* Right Section with Contact Details */}
-            <div className="col-lg-6" style={{ padding: "50px" }}>
-              <div className="row mb-4">
-                <div className="col-lg-12">
-                  <b style={{ fontSize: "25px", color: "#4e73df" }}>
-                    Our Address
-                  </b>
-                  <p style={{ fontSize: "20px", color: "#333", marginTop: "10px" }}>
-                    INDIAN ENCLAVE, Ayyappa Nagar, Vijayawada, Andhra Pradesh,
-                    India
-                  </p>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-lg-12">
-                  <b style={{ fontSize: "25px", color: "#4e73df" }}>Phone</b>
-                  <p style={{ fontSize: "20px", color: "#333", marginTop: "10px" }}>
-                    +91 7799223399
-                  </p>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-lg-12">
-                  <b style={{ fontSize: "25px", color: "#4e73df" }}>
-                    Open Hours
-                  </b>
-                  <p style={{ fontSize: "20px", color: "#333", marginTop: "10px" }}>
-                    Mon-Sat 8:00am-4:30pm
-                  </p>
-                </div>
-              </div>
-
-              <div className="d-grid gap-2">
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  style={{
-                    fontSize: "20px",
-                    backgroundColor: "#4e73df",
-                    border: "none",
-                    borderRadius: "30px",
-                    padding: "10px 20px",
-                    transition: "background 0.3s ease",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#3751b0")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#4e73df")
-                  }
-                >
-                  Contact Us
-                </button>
-              </div>
-
-              {/* Modal Section */}
-              <div
-                className="modal fade"
-                id="staticBackdrop"
-                data-bs-backdrop="static"
-                data-bs-keyboard="false"
-                tabIndex="-1"
-                aria-labelledby="staticBackdropLabel"
-                aria-hidden="true"
-              >
-                <div className="modal-dialog modal-dialog-centered">
-                  <div className="modal-content">
-                    <div className="modal-body">
-                      <form>
-                        <div className="mb-3 mt-4">
-                          <label className="form-label">Name</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            name="patName"
-                            style={{
-                              width: "100%",
-                              padding: "10px",
-                              fontSize: "16px",
-                              border: "1px solid #ddd",
-                              borderRadius: "4px",
-                            }}
-                          />
+            <!-- Contact Form -->
+            <div class="col-md-6 mb-4">
+                <div class="contact-form">
+                    <h3 class="mb-4">Send Us a Message</h3>
+                    <form action="ContactServlet" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                        <div className="mb-3 mt-4">
-                          <label className="form-label">Email</label>
-                          <input
-                            type="email"
-                            className="form-control"
-                            name="email"
-                            style={{
-                              width: "100%",
-                              padding: "10px",
-                              fontSize: "16px",
-                              border: "1px solid #ddd",
-                              borderRadius: "4px",
-                            }}
-                          />
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
                         </div>
-                        <div className="mb-3 mt-4">
-                          <label className="form-label">Message</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            name="message"
-                            style={{
-                              width: "100%",
-                              padding: "10px",
-                              fontSize: "16px",
-                              border: "1px solid #ddd",
-                              borderRadius: "4px",
-                            }}
-                          />
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                         </div>
-                      </form>
-                    </div>
-                    <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" className="btn btn-primary">
-                        Send
-                      </button>
-                    </div>
-                  </div>
+                        <a href="success.jsp" class="btn btn-custom">Submit</a>
+                    </form>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
 
-      {/* Map Section */}
-      <section style={{ padding: "60px 0", backgroundColor: "#f8f9fa" }}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12 d-flex justify-content-center">
-              <iframe
-                src="https://maps.google.com/maps?q=Vijayawada,%20Andhra%20Pradesh,%20India&output=embed"
-                style={{
-                  border: "none",
-                  borderRadius: "20px",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                  transition: "transform 0.3s ease",
-                }}
-                height="500"
-                width="1000"
-                loading="lazy"
-                title="Google Map"
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "scale(1.02)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "scale(1)")
-                }
-              ></iframe>
+        <!-- Google Map Section -->
+        <div class="row mt-5">
+            <div class="col">
+                <h3 class="text-center mb-4">Our Location</h3>
+                <iframe
+                    class="map-iframe"
+                    src="https://maps.google.com/maps?q=Vijayawada,%20Andhra%20Pradesh,%20India&output=embed"
+                    loading="lazy"
+                    title="Google Map of Location">
+                </iframe>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
 
-      {/* Footer */}
-      <Footer />
-    </>
-  );
-};
-
-export default Contact;
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

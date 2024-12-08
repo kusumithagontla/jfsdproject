@@ -41,18 +41,11 @@
           <a class="nav-link" href="login.jsp">Sign out</a>
         </li>
 
-        <% if (auth != null) { %>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="orders.jsp">Orders</a>
-          </li>
+       
           <li class="nav-item mx-2">
             <a class="nav-link" href="log-out">Logout</a>
           </li>
-        <% } else { %>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="login.jsp"></a>
-          </li>
-        <% } %>
+        
       </ul>
     </div>
   </div>
